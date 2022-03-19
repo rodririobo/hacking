@@ -30,13 +30,13 @@ function mostrar(e){
 	var docu=document.getElementById("main-section");//obtiene el elemento por el id donde se colocan los datos leidos.
 
 	var datos=e.target;
-	if(datos.readyState == 4 && datos.status==200)
+	if(datos.readyState == 4 && datos.status == 200)
 	{
 		
 		docu.innerHTML=datos.responseText;
 		
     }else{
-        docu.innerHTML="¡Error fichero!"+' código de estado: '+datos.statusText;
+               docu.innerHTML='Código de estado: '+'¡Error fichero!'+ datos.statusText;
 
 	}
 
