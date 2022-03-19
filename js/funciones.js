@@ -36,7 +36,7 @@ function mostrar(e){
 		docu.innerHTML=datos.responseText;
 		
     }else{
-               docu.innerHTML='Código de estado: '+'¡Error fichero!'+ datos.statusText;
+               docu.innerHTML='Código de estado: '+datos.statusText+'¡Error fichero!';
 
 	}
 
