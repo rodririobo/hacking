@@ -36,4 +36,4 @@ function ver(e){
 	
 	 cajadatos.appendChild(b);
 }
-addEventListener('load', iniciar('footer','../contador/contador.php'));
+addEventListener('load', iniciar('footer','../../../contador/contador.php'));
