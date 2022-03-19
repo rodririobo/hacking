@@ -39,7 +39,7 @@ function mostrar(e){
                docu.innerHTML='Código de estado: '+datos.statusText+'¡Error fichero!';
 
 	}
-docu.innerHTML=datos.responseText;
+
 	 anchomini=document.getElementById('navbar_mini').offsetWidth;
 	 anchomedio=document.getElementById('navbar').offsetWidth;
 
