@@ -1,0 +1,32 @@
+a:link, 
+a:visited, 
+a:active, 
+a:hover {
+
+color:#0e2729;
+
+}
+
+#header {
+
+ background-color: #f47e7d;
+
+}
+
+.menu {
+
+  background-color:rgb(170, 123, 53);
+
+}
+
+#main-section {
+
+  background-color: burlywood;
+
+}
+
+#footer {
+
+ background-color: #fb8335;
+
+}

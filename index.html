@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+   <head>
+      
+   <title>Plantilla</title>
+   
+      <meta charset="UTF-8"/>
+      <meta name="description" content=""/>
+      <meta name="author" content=""/>
+     
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" type="text/css" href="fuentes/fuente.css"/>
+	   <link href="css/colors.css" rel="stylesheet" type="text/css"/>
+      <link href="css/base.css" rel="stylesheet" type="text/css"/>
+      <link href="css/great.css" rel="stylesheet" type="text/css" media="screen and (min-width: 981px)"/>
+      <link href="css/medium.css" rel="stylesheet" type="text/css" media="screen and (min-width: 481px) and (max-width: 980px)"/>
+      <link href="css/mini.css" rel="stylesheet" type="text/css" media="screen and (max-width: 480px)"/>
+      <link href="css/menu_movil.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="css/menu_dropdown.css" rel="stylesheet" type="text/css" media="screen" />
+      <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	  
+      
+   </head>
+   <body>
+   <div id="wrapper">
+         <header id="header">
+            <h1>Encabezado página</h1>
+            <h2>Prueba 2</h2>
+         </header>
+         <!--Lo que se visualiza en tamaño escritorio-->
+         <aside class="menu left display-great">
+            <h2 class="titulo">Archivo</h2>
+            <ul>
+			      <li  onclick="leer('../articulos/index.html'), cambiar()" title="index">item</li>
+   
+            </ul>
+			<h2 class="titulo">Documento</h2>
+            <ul>
+               <li  onclick="imprimir()" title="Imprimir sección o completo">Imprimir...</li>
+            </ul>
+         </aside>
+
+         <!-- seguir añadiendo aqui aside con clase right o left-->
+
+         <!-- Hasta aqui tamaño escritorio -->
+        
+         <!-- Lo que se visualiza en tamaño medio -->
+         
+         <div id="navbar" class="display-medium topnav">
+            <a id="opcion" href="#inicio" class="active" onclick="menu()">Elegir opción</a>
+            <div id="myLinks">
+				   <h2 class="titulo">Archivo</h2>
+				   <ul>
+				      <li  onclick="leer('../articulos/index.html'), cambiar()" title="index">item</li> 
+		
+				  </ul>
+
+					<h2 class="titulo">Documento</h2>
+					<ul>
+					  <li  onclick="imprimir()" title="Imprimir sección o completo">Imprimir...</li>
+				   </ul>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fa fa-bars"></i></a>
+         </div>
+
+          <!-- Fin de lo que se visualiza en tamaño medio -->
+      <!-- Loque se visualiza en tamaño pequeño -->
+      <div id="navbar_mini" class="display-mini">
+            
+            <div class="dropdown">
+            <button class="dropbtn" onclick="menu_mini(0)">Menú</button>
+            <div id="submenu" class="dropdown-content myLinks">
+  
+            <div class="dropdown">
+            <button class="dropbtn" onclick="menu_mini(1)">Mis datos</button>
+            <div class="dropdown-content myLinks">
+			<ul>
+                 <li  onclick="leer('../articulos/index.html'), cambiar()" title="index">item</li>
+		
+		    </ul>
+            </div>
+            </div>
+
+            <div class="dropdown">
+            <button class="dropbtn" onclick="menu_mini(2)">Documento</button>
+            <div class="dropdown-content myLinks">
+            <ul>
+					  <li  onclick="imprimir()" title="Imprimir sección o completo">Imprimir...</li>
+			</ul>
+					
+            </div>
+
+            </div>
+            </div>
+
+            </div>
+
+         </div>
+         <!-- Fin de lo que se visualiza en tamaño pequeño -->
+         <div id="main-section">
+            <!-- Conenido se añade aqui con AJAX -->
+         </div>
+
+         <footer id="footer">
+               <h2>Pie página</h2>
+         </footer>
+      </div>
+      <script  src="js/funciones.js"></script>
+	  <script  src="js/ajax.js"></script>	  
+   </body>
+</html>

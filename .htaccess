@@ -1,0 +1,113 @@
+# Block site from being framed with X-Frame-Options and CSP
+Content-Security-Policy: frame-ancestors 'none'
+X-Frame-Options: DENY
+
+# Block pages from loading when they detect reflected XSS attacks
+X-XSS-Protection: 1; mode=block
+
+# Prevent browsers from incorrectly detecting non-scripts as scripts
+X-Content-Type-Options: nosniff
+
+RewriteEngine On
+
+#Proteger directorios evitando la ejecución de scripts (edita las extensiones según lo requerido):
+
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
+Options -ExecCGI
+ 
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+
+#Redirect to non www version
+RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#Prevent 404 en non-existing folders
+#Options -MultiViews
+RedirectMatch 403 /\..*$
+
+#Default page
+DirectoryIndex http://rodririobo.batcave.net/
+
+#Default contact email
+SetEnv SERVER_ADMIN rodri.riobo@gmail.com
+
+#directory
+#Deny from All
+
+#Default charset
+AddDefaultCharset UTF-8
+
+#Gzip compression
+<IfModule mod_gzip.c>
+   mod_gzip_on       Yes
+   mod_gzip_dechunk  Yes
+   mod_gzip_item_include file      .(html?|txt|css|js|php|pl)$
+   mod_gzip_item_include handler   ^cgi-script$
+   mod_gzip_item_include mime      ^text/.*
+   mod_gzip_item_include mime      ^application/x-javascript.*
+   mod_gzip_item_exclude mime      ^image/.*
+   mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+#Enable Keep-Alive Headers
+<IfModule mod_headers.c>
+   Header set Connection Keep-Alive
+</IfModule>
+
+#Default 403 error
+ErrorDocument 403 http://rodririobo.batcave.net/errores/403.html
+
+#Default 404
+ErrorDocument 404 http://rodririobo.batcave.net/errores/404.html 
+
+#Default 500 error
+ErrorDocument 500 http://rodririobo.batcave.net/errores/500.html
+
+#Prevent directory navigation
+Options All -Indexes
+
+#Disable CGI
+Options -ExecCGI
+
+#Hide PoweredBy
+Header unset X-Powered-By
+
+#Do not allow pages to be framed
+Header set X-Frame-Options SAMEORIGIN
+
+#Disable server sign
+ServerSignature Off
+
+#Mod Rewrite
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   Options +FollowSymlinks
+   RewriteBase /
+
+   #Block Spam Bots
+   RewriteCond %{HTTP_USER_AGENT} ^(aesop_com_spiderman|alexibot|backweb|bandit|batchftp|bigfoot) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(black.?hole|blackwidow|blowfish|botalot|buddy|builtbottough|bullseye) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(cheesebot|cherrypicker|chinaclaw|collector|copier|copyrightcheck) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(cosmos|crescent|curl|custo|da|diibot|disco|dittospyder|dragonfly) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(drip|easydl|ebingbong|ecatch|eirgrabber|emailcollector|emailsiphon) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(emailwolf|erocrawler|exabot|eyenetie|filehound|flashget|flunky) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(frontpage|getright|getweb|go.?zilla|go-ahead-got-it|gotit|grabnet) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(grafula|harvest|hloader|hmview|httplib|httrack|humanlinks|ilsebot) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(infonavirobot|infotekies|intelliseek|interget|iria|jennybot|jetcar) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^(joc|justview|jyxobot|kenjin|keyword|larbin|leechftp|lexibot|lftp|libweb) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^web(zip|emaile|enhancer|fetch|go.?is|auto|bandit|clip|copier|master|reaper|sauger|site.?quester|whack) [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^.*(craftbot|download|extract|stripper|sucker|ninja|clshttp|webspider|leacher|collector|grabber|webpictures).*$ [NC]
+   RewriteRule . - [F,L]
+
+   #Block illegal or unsafe access
+   RewriteCond %{REQUEST_METHOD} ^(HEAD|TRACE|DELETE|TRACK) [NC,OR]
+   RewriteCond %{THE_REQUEST} ^.*(\r|\n|%0A|%0D).* [NC,OR]
+   RewriteCond %{HTTP_COOKIE} ^.*(<|>|'|'|%0A|%0D|%27|%3C|%3E|%00).* [NC,OR]
+   RewriteCond %{HTTP_USER_AGENT} ^.*(<|>|'|'|%0A|%0D|%27|%3C|%3E|%00).* [NC,OR]
+   RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127.0.0.1).* [NC,OR]
+   RewriteCond %{QUERY_STRING} ^.*(<|>|'|'|%0A|%0D|%27|%3C|%3E|%00).* [NC]
+   RewriteRule (.*) - [F,L]
+</IfModule>

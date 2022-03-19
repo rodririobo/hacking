@@ -1,0 +1,79 @@
+.display-mini {
+    display: inherit !important;
+    font-size: 1.5em;
+}
+body {
+
+    font-family: Arial;
+}
+
+ div#wrapper footer h2, 
+ #main-section {
+    text-align: inherit !important;
+    padding-left: 2%;
+ }
+ 
+ div#wrapper footer h2 {
+    margin-bottom: 0;
+ }
+ header {
+    padding: 2%;
+ }
+
+#main-section h2 {
+
+    padding-top: 2%;
+}
+
+#main-section .datos ul li:first-child,  
+#main-section .datos ul li {
+   font-size: 1.2em;
+ }
+.datos ul li {
+    margin-top: 2%;
+    padding: 0.3%;
+ }
+.datos, .datos h2 {
+
+    font-size: 1em;
+ }
+
+ div.display-mini.topnav {
+
+    margin-bottom: 20px;
+
+ }
+
+#header {
+
+    margin-top: 20px;
+    height: 120px;
+    font-size: 0.8em;
+}
+
+#footer, #header {
+
+    text-align: center;
+}
+
+#main-section .datos:last-child {
+
+  margin-bottom: 20px;
+
+}
+
+#main-section {
+
+   padding-left: 0;
+}
+
+#navbar_mini {
+   margin-bottom: 10px;
+}
+
+#video {
+
+   width:370px; 
+   height:290px;
+
+}
