@@ -76,6 +76,7 @@ padding-left: 11%;
 pre {
   background: #f4f4f4;
   border: 1px solid #ddd;
+  border-radius: 10px;
   border-left: 3px solid #f36d33;
   color: #666;
   page-break-inside: avoid;
@@ -86,7 +87,8 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
-  display: block;
+  display: inline-block;
+  width: 50%;
   word-wrap: break-word;
 }
 
