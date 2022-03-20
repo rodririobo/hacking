@@ -130,6 +130,8 @@ pre {
   width: 95%;
   padding-top: 10px;
   clear:both;
+  margin-left: auto;
+  margin-right: auto;
     
 }
 #myBtn {
