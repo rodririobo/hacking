@@ -87,9 +87,12 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
-  display: inline-block;
+  display: block;
   width: 70%;
   word-wrap: break-word;
+  margin:0 auto;
+
+  
 }
 
 #foto {
@@ -119,18 +122,19 @@ pre {
   font-size: 1.2em;
   background-color: burlywood;
   border-radius: 10px;
-  width: 100%;
+  width: 80%;  
+ margin:0 auto;
 }
 .datos a:hover {
   color: #0e94bd;
 } 
 .datos p  {
-
+ display:block;
   text-align: justify;
+  width: 50%;
   padding-top: 10px;
-  clear:both;
-  width:50%;
-  margin:0 auto;
+ 
+
     
 }
 #myBtn {
