@@ -123,7 +123,7 @@ function imprimir()
 
 function inicio() {
 		
-	leer('../../articulos/index.html');//Contenido principal al cargar el contenido de inicio
+	leer('/web.github.io/articulos/index.html');//Contenido principal al cargar el contenido de inicio
 
 	var tab=document.getElementsByTagName('li');//selecciona los elementos li
 	for(var i=0;i<tab.length;i++){//añade tabindex navegacion con tabulacion
