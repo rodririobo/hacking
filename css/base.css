@@ -72,6 +72,14 @@ padding-left: 11%;
   font-size: 1.2em;
   text-transform: uppercase;
 }
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+
 #foto {
 
     display: block;
