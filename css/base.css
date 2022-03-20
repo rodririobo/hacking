@@ -74,6 +74,7 @@ padding-left: 11%;
 }
 
 pre code {
+  width: 50%;
   background-color: #eee;
   border: 1px solid #999;
   display: block;
