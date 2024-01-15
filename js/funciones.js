@@ -11,7 +11,7 @@ function menu() {
 }
 
 //AJAX lee el documento html o txt del servidor, recibe la url relativa
- 
+
 function leer(url){
 
 	var docu=document.getElementById("main-section");//obtiene el elemento por el id donde se colocan los datos leidos.
@@ -36,18 +36,18 @@ function mostrar(e){
 		docu.innerHTML=datos.responseText;
 		
     }else{
-               docu.innerHTML='Código de estado: '+datos.statusText+'¡Error fichero!'+ 'Kentone';
+        docu.innerHTML='Código de estado: '+datos.statusText+'¡Error fichero!'+ 'Kentone';
 
 	}
 
-	 anchomini=document.getElementById('navbar_mini').offsetWidth;
-	 anchomedio=document.getElementById('navbar').offsetWidth;
+	anchomini=document.getElementById('navbar_mini').offsetWidth;
+    anchomedio=document.getElementById('navbar').offsetWidth;
 
 if (anchomini>0 || anchomedio>0){
-		  ocultar_menu();
-		  
-   }
-   
+	ocultar_menu();
+
+}
+
 }
 
 function ocultar_menu () {
@@ -84,18 +84,18 @@ function moreless(m,t,p) {
 	var txt=puntos.innerHTML;
 	if (btnText.innerHTML === 'Leer menos') {
 
-	  btnText.innerHTML = 'Leer más';
-	  moreText.style.display = 'none';
-	  puntos.innerHTML=txt +'..';
+	btnText.innerHTML = 'Leer más';
+	moreText.style.display = 'none';
+	puntos.innerHTML=txt +'..';
 	
 	} else {
 
-	  puntos.innerHTML=txt.substr(0,txt.length-2); 
-	  btnText.innerHTML = 'Leer menos';
-	  moreText.style.display = 'inline';
+	puntos.innerHTML=txt.substr(0,txt.length-2); 
+	btnText.innerHTML = 'Leer menos';
+	moreText.style.display = 'inline';
 	}
 	
-  } 
+} 
 
 //imprimir html
 
@@ -157,7 +157,7 @@ function menu_mini(i) {
 
 	if (x[i].style.display === "inline") {//inline
 		if((i+1)<p.length){
-		  x[i].style.display = "none";
+    	  x[i].style.display = "none";
 		  p[i+1].style.marginTop = "0px";
 		  p[i].setAttribute('contenido', "+");
 		  
@@ -169,8 +169,8 @@ function menu_mini(i) {
 		}
 	} else {
 		if((i+1)<p.length){
-		  x[i].style.display = "inline";//inline
-		  p[i].setAttribute('contenido', "-");
+   		  x[i].style.display = "inline";//inline
+ 		  p[i].setAttribute('contenido', "-");
 		}else{// cuando sea el último elemento ira por este else del -
 		  x[i].style.display = "inline";//inline
 		  p[i].setAttribute('contenido', "-");
@@ -191,69 +191,69 @@ if (document.querySelector("#navbar_mini").offsetWidth>0){
 }else{
 	isVisible=false;
 }  
- 
+
 }
 
 function tamano () {//ajusta el ancho de barra menú
 	
-	  var arti = document.getElementById("main-section");
-	  navbar.style.width=arti.offsetWidth + "px";
-	 
+    var arti = document.getElementById("main-section");
+       	navbar.style.width=arti.offsetWidth + "px";
+	
 }
 
 function seleccion () {//selecciona una barra de menú según su visibilidad. 
-  
-   
-  if (isVisible){
+
+
+if (isVisible){
 		
 	navbar=document.getElementById("navbar_mini");
 	elem=document.getElementById("submenu");
-  
-  } else {
-	  
+
+} else {
+
 	navbar = document.getElementById("navbar");
     elem=document.getElementById("myLinks");
-	  
-  }
-  	tamano();
-	
+
+}
+	tamano();
+
 }
 
 function desplazamiento(){
 	
 	if (window.pageYOffset >= document.getElementById("header").offsetHeight && elem.style.display =='none') {//compara el desplazamiento Y superior del elemento con la ventana
-	  navbar.classList.add("barra");//añade la clase al elemento
-	  
-  } else {
-      navbar.classList.remove("barra");//elimina la clase al elemento
- }
-	
-	
+        navbar.classList.add("barra");//añade la clase al elemento
+
+} else {
+        navbar.classList.remove("barra");//elimina la clase al elemento
+}
+
+
 }
 
 addEventListener('load',inicio());
 
 window.onresize = function(){//Cuando se cambia el tamaño.
- 
- visible(); 
- seleccion();
- 
+
+visible(); 
+seleccion();
+
 };
 
 window.onscroll = function(){//fija el menú a top con la clase barra
 
-  visible(); 
-  seleccion();
-  desplazamiento();
+    visible(); 
+    seleccion();
+    desplazamiento();
 
 
 };
 
 window.addEventListener("orientationchange", function() {
-  
-  visible(); 
-  seleccion();
-  desplazamiento();
-  
-  
+
+    visible(); 
+    seleccion();
+    desplazamiento();
+
+
 });
