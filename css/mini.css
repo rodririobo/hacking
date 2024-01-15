@@ -77,3 +77,8 @@ body {
    height:290px;
 
 }
+
+#datos > pre {
+
+   width: 100%;
+}
