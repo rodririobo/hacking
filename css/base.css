@@ -126,19 +126,6 @@ code {
 
 }
 
-#datos > pre {
-
-  display: flex;
-  justify-content: center;
-  background-color: #000;
-  color: #FFF;
-  border-radius: 20px;
-  width: 70%;
-  margin: 2rem auto;
-
-  
-}
-
 .datos a:hover {
   color: #0e94bd;
 } 
