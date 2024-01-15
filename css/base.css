@@ -126,7 +126,7 @@ code {
 
 }
 
-article pre {
+#datos > pre {
 
   background-color: #000;
   color: #FFF;
