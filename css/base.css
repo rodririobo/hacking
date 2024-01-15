@@ -94,14 +94,18 @@ padding-left: 11%;
 
 .datos {
   
-  display:block;
+  display: flex;
   overflow: auto;
   padding-bottom: 2%;
   font-size: 1.2em;
   background-color: burlywood;
   border-radius: 10px;
-  width: 80%;  
-  margin:0 auto;
+  width: 80%;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
 }
 
 code {
@@ -116,14 +120,12 @@ code {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 1.6em;
-  max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
   display: block;
   width: 70%;
   word-wrap: break-word;
-  margin:0 auto;
-
+  
 }
 
 .datos a:hover {
