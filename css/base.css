@@ -128,9 +128,12 @@ code {
 
 #datos > pre {
 
+  display: flex;
+  justify-content: center;
   background-color: #000;
   color: #FFF;
   border-radius: 20px;
+
   
 }
 
