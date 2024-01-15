@@ -36,5 +36,10 @@ h2.titulo {
 
     width:420px; 
     height:340px;
- 
- }
+
+}
+
+#datos > pre {
+
+    width: 100%;
+}
