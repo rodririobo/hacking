@@ -1,17 +1,18 @@
 
-    ## Comando ping
-    ```bash
+    <h2>Comando ping</h2>
+    <p>
+       <code>
            Ping -c 1 192.168.0.45 
-    ``````
-    
+       </code>
+    </p>
+    <p>
       El -c 1 le indica al comando que envíe un paquete, con esto comprobamos que la máquina responde (encendida), si el ttl <= 64 máquina Linux y si es ttl => 127 máquina windows. 
-    
-    ```bash
-          Ping -c 1 192.168.0.45 -R 
-    ``````
-    Con -R nos listaría los nodos intermediarios. Ejemplo:
-    
-     
+    </p>
+    <code>
+      Ping -c 1 192.168.0.45 -R 
+    </code>
+    <p>Con -R nos listaría los nodos intermediarios. Ejemplo:</p>
+    <pre> 
       Salida Terminal
 
       PING 192.168.1.1 (192.168.1.1) 56(124) bytes of data.
@@ -25,3 +26,5 @@
         --- 192.168.1.1 ping statistics ---
         1 packets transmitted, 1 received, 0% packet loss, time 0ms
         rtt min/avg/max/mdev = 23.921/23.921/23.921/0.000 ms
+    </pre> 
+</article>
