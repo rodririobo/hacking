@@ -195,7 +195,14 @@ font-size: 1.5em;
 	font-size:1.2em;
 	
 }
+.terminal {
 
-.datos p:last-child {
-  white-space: pre-line;
+white-space: pre-line;
+background-color: black;
+color: white;
+justify-content: center;
+display: flex;
+border-radius: 20px;
+padding: 5px;
+
 }
