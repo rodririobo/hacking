@@ -130,13 +130,11 @@ code {
   color: #0e94bd;
 } 
 .datos p  {
- display:block;
+
   text-align: justify;
   width: 50%;
   padding-top: 10px;
- 
 
-    
 }
 #myBtn {
 
