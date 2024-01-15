@@ -8,4 +8,23 @@
     <p>
       El -c 1 le indica al comando que envíe un paquete, con esto comprobamos que la máquina responde (encendida), si el ttl <= 64 máquina Linux y si es ttl => 127 máquina windows. 
     </p>
-        </article>
+    <code>
+      Ping -c 1 192.168.0.45 -R 
+    </code>
+    <p>
+      Con -R nos listaría los nodos intermediarios.
+      PING 192.168.1.1 (192.168.1.1) 56(124) bytes of data.
+      64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=23.9 ms RR:     
+        
+      192.168.1.61
+        192.168.1.1
+        192.168.1.1
+        192.168.1.61
+
+        --- 192.168.1.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 23.921/23.921/23.921/0.000 ms
+
+  </p>
+
+</article>
