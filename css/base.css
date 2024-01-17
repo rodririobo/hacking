@@ -62,17 +62,6 @@ padding-left: 11%;
 
 }
 
-.datos h2 {
-
-  color: #000;
-  text-align: left;
-  border-bottom: 2px solid red;
-  margin-left: 2%;
-  margin-right: 2%;
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
 #foto {
 
     display: block;
@@ -83,6 +72,7 @@ padding-left: 11%;
     max-width:100%;
     height:auto;
 }
+
 #correo {
 
   margin-left: 2.3%;
@@ -108,34 +98,46 @@ padding-left: 11%;
 
   & code {
     
-    background: #f4f4f4;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    width: 70%;
-    word-wrap: break-word;
-    
+        background: #f4f4f4;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        border-left: 3px solid #f36d33;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        width: 70%;
+        word-wrap: break-word;
+      }
+
+& p  {
+        text-align: justify;
+        width: 50%;
+        padding-top: 10px;
     }
-}
-.datos a:hover {
-  color: #0e94bd;
-} 
-.datos p  {
 
-  text-align: justify;
-  width: 50%;
-  padding-top: 10px;
+& h2 {
+
+        color: #000;
+        text-align: left;
+        border-bottom: 2px solid red;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+  & a:hover {
+        color: #0e94bd;
+  } 
 
 }
+
 #myBtn {
 
   cursor:pointer;
