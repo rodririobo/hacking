@@ -1,18 +1,18 @@
 <article id="datos" class="datos">
    <h2>Tty Tratamiento</h2>
-    <p>
-        Una vez que se hace una reverse shell, para tener una consola interativa full ejecutaremos los siguientes comandos:
-       
-       <ul>
-         <code>
-         <li>1. script /dev/null -c bash</li>
-         <li>2. Una vez hecho esto, Ctrl + Z para poner la sesión en segundo plano y luego en nuestra terminal</li>
-         <li>3. stty raw -echo; fg</li>
-         <li>4. reset</li>
-         <li>5. Terminal type? xterm</li>
-         <li>6. export TERM=xterm</li>
-         <li>7. export SHELL=bash</li>
-        </code>
-      </ul>
-   </p>
+   <p>
+      Una vez que se hace una reverse shell, para tener una consola interativa full ejecutaremos los siguientes comandos:
+      </p>
+      <code> 
+         <ol>
+            <li>script /dev/null -c bash</li>
+            <li>Una vez hecho esto, Ctrl + Z para poner la sesión en segundo plano y luego en nuestra terminal</li>
+            <li>stty raw -echo; fg</li>
+            <li>reset</li>
+            <li>Terminal type? xterm</li>
+            <li>export TERM=xterm</li>
+            <li>export SHELL=bash</li>
+         
+         </ol>
+      </code>
 </article>
