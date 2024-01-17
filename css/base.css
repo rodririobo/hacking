@@ -101,33 +101,31 @@ padding-left: 11%;
   background-color: burlywood;
   border-radius: 10px;
   width: 80%;
-  align-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0 auto;
 
+  & code {
+    
+    background: #f4f4f4;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    width: 70%;
+    word-wrap: break-word;
+    
+    }
 }
-
-code {
-  
-  background: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  border-left: 3px solid #f36d33;
-  color: #666;
-  page-break-inside: avoid;
-  font-family: monospace;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  overflow: auto;
-  padding: 1em 1.5em;
-  display: block;
-  width: 70%;
-  word-wrap: break-word;
-  
-}
-
 .datos a:hover {
   color: #0e94bd;
 } 
@@ -146,8 +144,10 @@ code {
 .datos ul, .datos p, .datos div {
   padding-left: 0px;
   width: 95%;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .datos strong {
   font-size: 1.2em;
