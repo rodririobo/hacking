@@ -1,5 +1,3 @@
-//Menú movil
-
 function menu() {
 	
 	var x = document.getElementById('myLinks');
